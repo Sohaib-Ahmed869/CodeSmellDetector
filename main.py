@@ -1,7 +1,7 @@
 import ast
 import difflib
 import os
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify,render_template
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -75,6 +75,8 @@ def detect_smells():
     # Return the detected smells as JSON
     return jsonify({"smells": smells})
 
+def index():
+    return render_template('index.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
