@@ -109,7 +109,7 @@
             errorDiv.style.display = 'none';
 
             // Send the code to the Flask backend using Fetch API
-            fetch('http://127.0.0.1:5000/detect-smells', {
+            fetch('/api/detect-smells', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
